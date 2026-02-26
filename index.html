@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#c9a326",
+            "background-light": "#f8f7f6",
+            "background-dark": "#0B0B0B",
+            surface: "#141414"
+          },
+          fontFamily: {
+            display: ["Manrope", "sans-serif"]
+          },
+          borderRadius: {
+            DEFAULT: "1rem",
+            lg: "1.25rem",
+            xl: "1.875rem",
+            full: "9999px"
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <style>
+.material-symbols-outlined{
+  font-family:"Material Symbols Outlined";
+  font-weight:normal;
+  font-style:normal;
+  font-size:24px;
+  line-height:1;
+  letter-spacing:normal;
+  text-transform:none;
+  display:inline-block;
+  white-space:nowrap;
+  word-wrap:normal;
+  direction:ltr;
+  -webkit-font-smoothing:antialiased;
+  font-feature-settings:"liga";
+  -webkit-font-feature-settings:"liga";
+  font-variation-settings:"FILL" 0,"wght" 500,"GRAD" 0,"opsz" 24;
+}
+.material-symbols-outlined.fill-1{
+  font-variation-settings:"FILL" 1,"wght" 600,"GRAD" 0,"opsz" 24;
+}
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-background-dark/80 backdrop-blur-md border-b border-white/5">
+    <div class="flex items-center justify-between px-4 py-4 max-w-screen-xl mx-auto gap-4">
+      <div class="flex items-center gap-3">
+        <img alt="Babil's Barbershop logo" class="h-12 w-12 rounded-full object-cover" src="assets/images/Babil-Logo.png" />
+        <h2 class="text-slate-100 text-lg font-extrabold tracking-tight">Babil’s Barbershop</h2>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-slate-300">
+        <a class="hover:text-primary transition-colors" href="#services">Services</a>
+        <a class="hover:text-primary transition-colors" href="#reviews">Reviews</a>
+        <a class="hover:text-primary transition-colors" href="#hours">Hours</a>
+        <a class="hover:text-primary transition-colors" href="#location">Location</a>
+      </nav>
+      <a class="bg-primary text-background-dark px-4 py-2 rounded-full text-sm font-bold shadow-lg shadow-primary/20" href="tel:+1XXXXXXXXXX">Call to Book</a>
+    </div>
+  </header>
+
+  <section class="relative min-h-screen flex flex-col justify-end pt-20">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/25 to-transparent z-10"></div>
+      <img alt="High-end Barber Shop Interior" class="w-full h-full object-cover" src="assets/images/hero-image.png" />
+    </div>
+    <div class="relative z-20 px-6 pb-16 flex flex-col gap-8 max-w-screen-md">
+      <div class="flex flex-col gap-3">
+        <h1 class="text-slate-100 text-5xl font-black leading-tight tracking-tight sm:text-6xl">
+          Sharp Cuts.<br />Clean Fades.<br />Real Barbering.
+        </h1>
+        <h2 class="text-slate-300 text-base font-medium">
+          4.8★ on Google • 120+ Reviews • Surrey, BC
+        </h2>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a class="flex-1 bg-primary text-background-dark h-14 rounded-full font-bold text-lg flex items-center justify-center gap-2 shadow-lg shadow-primary/20 active:scale-95 transition-transform" href="tel:+1XXXXXXXXXX">
+          <span class="material-symbols-outlined">call</span>
+          Call Now
+        </a>
+        <a class="flex-1 border-2 border-primary/50 text-primary h-14 rounded-full font-bold text-lg flex items-center justify-center gap-2 backdrop-blur-sm active:scale-95 transition-transform" href="https://www.google.com/maps/dir/?api=1&destination=8434%20120%20St%20%23106%2C%20Surrey%2C%20BC%20V3W%207S2" target="_blank" rel="noreferrer">
+          <span class="material-symbols-outlined">near_me</span>
+          Get Directions
+        </a>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <span class="px-3 py-1.5 rounded-full text-xs font-semibold border border-white/20 bg-background-dark/45 text-slate-200">Clean Tools</span>
+        <span class="px-3 py-1.5 rounded-full text-xs font-semibold border border-white/20 bg-background-dark/45 text-slate-200">Walk-ins Welcome</span>
+        <span class="px-3 py-1.5 rounded-full text-xs font-semibold border border-white/20 bg-background-dark/45 text-slate-200">4.8★ Rated</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-28 px-6 bg-background-dark">
+    <div class="max-w-screen-xl mx-auto">
+      <div class="mb-10 text-center">
+        <h2 class="text-slate-100 text-3xl font-extrabold tracking-tight">Our Services</h2>
+        <span class="mt-4 h-1 w-14 bg-primary rounded-full inline-block"></span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-5">
+        <div class="group relative flex items-center justify-between gap-4 rounded-xl bg-surface border border-white/5 p-5 shadow-md shadow-black/25 transition-transform duration-300 hover:-translate-y-1">
+          <div class="flex flex-col gap-1 flex-[2_2_0px]">
+            <div class="flex items-center gap-2 text-primary">
+              <span class="material-symbols-outlined">content_cut</span>
+            </div>
+            <p class="text-slate-100 text-xl font-bold">Hair &amp; Styling</p>
+            <p class="text-slate-400 text-sm leading-relaxed">Precision cuts tailored to your unique face shape and lifestyle.</p>
+          </div>
+          <div class="w-20 h-20 rounded-lg overflow-hidden shrink-0 bg-black">
+            <img alt="Hair Styling" class="block w-full h-full object-cover transform scale-[1.06] opacity-80 group-hover:opacity-100 transition-opacity" src="assets/images/hair_styling.png" />
+          </div>
+        </div>
+        <div class="group relative flex items-center justify-between gap-4 rounded-xl bg-surface border border-white/5 p-5 shadow-md shadow-black/25 transition-transform duration-300 hover:-translate-y-1">
+          <div class="flex flex-col gap-1 flex-[2_2_0px]">
+            <div class="flex items-center gap-2 text-primary">
+              <span class="material-symbols-outlined">face_5</span>
+            </div>
+            <p class="text-slate-100 text-xl font-bold">Beard Trim</p>
+            <p class="text-slate-400 text-sm leading-relaxed">Expert shaping, lining, and conditioning for a sharp, clean beard.</p>
+          </div>
+          <div class="w-20 h-20 rounded-lg overflow-hidden shrink-0 bg-black">
+            <img alt="Beard Trim" class="block w-full h-full object-cover transform scale-[1.06] opacity-80 group-hover:opacity-100 transition-opacity" src="assets/images/beard_trim.png" />
+          </div>
+        </div>
+        <div class="group relative flex items-center justify-between gap-4 rounded-xl bg-surface border border-white/5 p-5 shadow-md shadow-black/25 transition-transform duration-300 hover:-translate-y-1">
+          <div class="flex flex-col gap-1 flex-[2_2_0px]">
+            <div class="flex items-center gap-2 text-primary">
+              <span class="material-symbols-outlined">person_pin</span>
+            </div>
+            <p class="text-slate-100 text-xl font-bold">Head Shave</p>
+            <p class="text-slate-400 text-sm leading-relaxed">Smooth, traditional straight-razor shave for a flawless bald look.</p>
+          </div>
+          <div class="w-20 h-20 rounded-lg overflow-hidden shrink-0 bg-black">
+            <img alt="Head Shave" class="block w-full h-full object-cover transform scale-[1.06] opacity-80 group-hover:opacity-100 transition-opacity" src="assets/images/head_shave.png" />
+          </div>
+        </div>
+        <div class="group relative flex items-center justify-between gap-4 rounded-xl bg-surface border border-white/5 p-5 shadow-md shadow-black/25 transition-transform duration-300 hover:-translate-y-1">
+          <div class="flex flex-col gap-1 flex-[2_2_0px]">
+            <div class="flex items-center gap-2 text-primary">
+              <span class="material-symbols-outlined">spa</span>
+            </div>
+            <p class="text-slate-100 text-xl font-bold">Hot Towel Shave</p>
+            <p class="text-slate-400 text-sm leading-relaxed">The ultimate luxury treatment with steaming towels and premium oils.</p>
+          </div>
+          <div class="w-20 h-20 rounded-lg overflow-hidden shrink-0 bg-black">
+            <img alt="Hot Towel Shave" class="block w-full h-full object-cover transform scale-[1.06] opacity-80 group-hover:opacity-100 transition-opacity" src="assets/images/hot_towel_shave.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="py-28 px-6 bg-surface">
+    <div class="max-w-screen-xl mx-auto">
+      <div class="mb-10 text-center">
+        <h2 class="text-slate-100 text-3xl font-extrabold tracking-tight">Trusted in Surrey</h2>
+        <p class="text-primary text-6xl font-extrabold mt-4 leading-none">4.8★</p>
+        <p class="text-slate-300 text-sm mt-2">Google rating • 120+ reviews</p>
+        <a class="inline-flex mt-6 bg-primary text-background-dark px-6 h-12 rounded-full font-bold items-center justify-center shadow-lg shadow-primary/20" href="https://g.page/r/REPLACE_THIS/review" target="_blank" rel="noreferrer">View All Reviews</a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-background-dark/50 p-6 rounded-xl border border-white/5">
+          <p class="text-slate-300 text-sm italic mb-4">"Best fade I’ve had in Surrey. Precise work and consistently clean finish."</p>
+          <p class="text-slate-100 font-bold text-sm">— Khalil Ahmad</p>
+        </div>
+        <div class="bg-background-dark/50 p-6 rounded-xl border border-white/5">
+          <p class="text-slate-300 text-sm italic mb-4">"Professional setup and very clean tools. You can tell they care about quality."</p>
+          <p class="text-slate-100 font-bold text-sm">— Isaac Tuscano</p>
+        </div>
+        <div class="bg-background-dark/50 p-6 rounded-xl border border-white/5">
+          <p class="text-slate-300 text-sm italic mb-4">"Great service and smooth experience every time I visit."</p>
+          <p class="text-slate-100 font-bold text-sm">— Sheikh Shahadat</p>
+        </div>
+        <div class="bg-background-dark/50 p-6 rounded-xl border border-white/5">
+          <p class="text-slate-300 text-sm italic mb-4">"Sharp haircut, no waiting around, and solid attention to detail."</p>
+          <p class="text-slate-100 font-bold text-sm">— Dan N.</p>
+        </div>
+      </div>
+      <div class="text-center mt-8 border-t border-white/5 pt-5">
+        <a class="inline-flex bg-primary text-background-dark px-6 h-11 rounded-full font-bold items-center justify-center shadow-md shadow-primary/20" href="https://g.page/r/REPLACE_THIS/review" target="_blank" rel="noreferrer">View All Reviews</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="hours" class="py-28 px-6 bg-background-dark">
+    <div class="max-w-screen-md mx-auto">
+      <div class="bg-surface rounded-xl border border-white/10 p-6 sm:p-8">
+        <h3 class="text-primary text-center text-2xl font-extrabold mb-7">Business Hours</h3>
+        <div class="divide-y divide-white/5">
+          <div class="flex items-center justify-between py-3"><span class="text-slate-300">Monday</span><span class="text-slate-100 font-semibold">9:00 AM – 6:30 PM</span></div>
+          <div class="flex items-center justify-between py-3"><span class="text-slate-300">Tuesday</span><span class="text-slate-100 font-semibold">9:00 AM – 6:30 PM</span></div>
+          <div class="flex items-center justify-between py-3"><span class="text-slate-300">Wednesday</span><span class="text-slate-100 font-semibold">9:00 AM – 7:00 PM</span></div>
+          <div class="flex items-center justify-between py-3"><span class="text-slate-300">Thursday</span><span class="text-slate-100 font-semibold">9:00 AM – 7:00 PM</span></div>
+          <div class="flex items-center justify-between py-3"><span class="text-slate-300">Friday</span><span class="text-slate-100 font-semibold">9:00 AM – 7:00 PM</span></div>
+          <div class="flex items-center justify-between py-3"><span class="text-slate-300">Saturday</span><span class="text-slate-100 font-semibold">9:00 AM – 6:00 PM</span></div>
+          <div class="flex items-center justify-between py-3"><span class="text-slate-300">Sunday</span><span class="text-slate-100 font-semibold">10:00 AM – 5:00 PM</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="location" class="py-28 px-6 bg-background-dark">
+    <div class="max-w-screen-md mx-auto text-center flex flex-col items-center">
+      <h2 class="text-slate-100 text-3xl font-extrabold mb-6">Visit Us</h2>
+      <div class="mb-8 p-6 bg-surface rounded-xl border border-white/5 w-full">
+        <span class="material-symbols-outlined text-primary text-4xl mb-4">location_on</span>
+        <p class="text-slate-100 text-xl font-bold mb-2">8434 120 St #106</p>
+        <p class="text-slate-400">Surrey, BC V3W 7S2</p>
+        <div class="mt-6 rounded-lg h-48 bg-slate-800 relative overflow-hidden flex items-center justify-center">
+          <img alt="Map of Surrey BC" class="absolute inset-0 w-full h-full object-cover opacity-50 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRSZnsfPGmowgndXHSAlpy42h34u3nsHt-KDxEBdBdYBWaA5nN0nHMbflpN2nLmfJ6gaji4mxDRCjG3jqlg1nCOS5hpJaX_7NFC6P5Wl-ZLTr2D8gXHFbLWE9OMwplpiWjR4HeI3mL0eXHcSY0qgc_A2VEtCsBCbcgncV1g8dY-YJL0-IvR1f7tC0hO40H-bIojSIk7Npzedl_mHFgza-ZaU-GdKjmYwwOyRR-BB27tXSES7NwZPVOfubrANDR3_QCJmSzubyI6cLu" />
+          <div class="relative z-10 bg-primary text-background-dark p-2 rounded-full shadow-lg">
+            <span class="material-symbols-outlined fill-1">location_on</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col w-full gap-4">
+        <a class="bg-primary text-background-dark h-14 rounded-full font-bold text-lg flex items-center justify-center gap-2" href="https://www.google.com/maps/dir/?api=1&destination=8434%20120%20St%20%23106%2C%20Surrey%2C%20BC%20V3W%207S2" target="_blank" rel="noreferrer">
+          <span class="material-symbols-outlined">directions</span>
+          Get Directions
+        </a>
+        <a class="border-2 border-primary/30 text-primary h-14 rounded-full font-bold text-lg flex items-center justify-center gap-2" href="tel:+1XXXXXXXXXX">
+          <span class="material-symbols-outlined">call</span>
+          Call (Phone)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-surface border-t border-white/5 py-10 px-6">
+    <div class="max-w-screen-xl mx-auto text-center">
+      <p class="text-slate-300 text-sm">Babil’s Barbershop • 8434 120 St #106, Surrey, BC V3W 7S2</p>
+      <p class="text-slate-500 text-xs mt-3">© 2026 Babil’s Barbershop</p>
+    </div>
+  </footer>
+</body>
+</html>
